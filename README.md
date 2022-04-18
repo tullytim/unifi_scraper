@@ -1,5 +1,6 @@
 # unifi_scraper
-small script to find Unifi cameras that come and go on the unifi website
+Small script to find Unifi cameras that come and go on the unifi website. 
+When the script finds a delta, it sends a text to the ```to_num``` number with a list of the available items.
 
 #Example config.yml
 ```
