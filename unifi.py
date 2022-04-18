@@ -9,6 +9,7 @@
 import sys
 import time
 import yaml
+import gc
 
 from requests_html import HTMLSession
 from bs4 import BeautifulSoup
@@ -33,6 +34,9 @@ def search(lastbody):
     body =''
     media = []
     items = []
+    resp.close()
+    resp = None
+    gc.collect()
     if found is None:
         return ''
     found_count = len(found)
