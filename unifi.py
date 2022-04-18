@@ -35,6 +35,7 @@ def search(lastbody):
     media = []
     items = []
     resp.close()
+    session.close()
     resp = None
     gc.collect()
     if found is None:
