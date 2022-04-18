@@ -21,8 +21,7 @@ def log(text):
 
 def send_text(body, media):
     twilio_client = Client(TWILIO_SID, TWILIO_TOKEN)
-    message = twilio_client.messages.create(body=body, from_=FROM_NUM,
-        to=TO_NUM, media_url=media)
+    message = twilio_client.messages.create(body=body, from_=FROM_NUM, to=TO_NUM, media_url=media)
     log("SMS Receipt: " + message.sid)
 
 def search(lastbody):
